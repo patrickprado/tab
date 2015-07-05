@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/RotateObject.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/TankSelector.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/RotateObject.js" Line="10" Column="3" />
+      <File FileName="Assets/Scripts/Managers/RotateTank.cs" Line="49" Column="3" />
+      <File FileName="Assets/Scripts/Managers/TankSelector.cs" Line="10" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
