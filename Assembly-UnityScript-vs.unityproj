@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\General\Ball.js" />
      <Compile Include="Assets\Scripts\Managers\AutoDestroy.js" />
+     <Compile Include="Assets\Scripts\Player\EnemyShot.js" />
      <Compile Include="Assets\Scripts\Player\MoveGun.js" />
      <Compile Include="Assets\Scripts\Player\MoveTank.js" />
      <Compile Include="Assets\Scripts\Player\MoveTrack.js" />

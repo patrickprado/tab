@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4037e057267742b8b7175dd785fc086
+timeCreated: 1436134871
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - spawnPoint: {instanceID: 0}
+  - bulletObject: {fileID: 100000, guid: f1fd1795188d2704b8b145b62b46eb20, type: 2}
+  - fireEffect: {fileID: 100000, guid: 77c1663be81d9b5479c31fe4fb4627aa, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

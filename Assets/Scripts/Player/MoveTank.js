@@ -9,12 +9,14 @@ var currentVelocity : float = 0;
 var maxSpeed : float = 10;
 
 var rotationSpeed : float = 30;
+var numberOfShotsReceived : float = 0;
 
 var spawnPoint : Transform;
 var bulletObject : GameObject;
 var fireEffect : GameObject;
 private var tankRunning : AudioSource;
 private var tankShot : AudioSource;
+
 
 function Start() {
 	// Get Track Controls
@@ -134,3 +136,4 @@ function Update () {
 	}
 	
 }
+
