@@ -32,3 +32,4 @@ function OnTriggerEnter(other: Collider){
 	Destroy(gameObject);
 }
 
+
