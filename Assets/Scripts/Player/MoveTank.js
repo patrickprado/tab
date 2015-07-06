@@ -1,5 +1,8 @@
 #pragma strict
 
+
+import System.Threading;
+ 
 var leftTrack : MoveTrack;
 var rightTrack : MoveTrack;
 
@@ -11,9 +14,13 @@ var maxSpeed : float = 10;
 var rotationSpeed : float = 30;
 var numberOfShotsReceived : float = 0;
 
+var remainingBullets : int;
+var reloadBullet : int;
+
 var spawnPoint : Transform;
 var bulletObject : GameObject;
 var fireEffect : GameObject;
+
 private var tankRunning : AudioSource;
 private var tankShot : AudioSource;
 
@@ -26,6 +33,7 @@ function Start() {
 	var sounds = gameObject.GetComponents(AudioSource);
  	tankRunning = sounds[0];
 	tankShot = sounds[1];
+	reloadBullet = 0;
 }
 
 function Update () {
@@ -125,7 +133,7 @@ function Update () {
 	
 	
 	// Fire!
-	if (Input.GetButtonDown("Fire1")) {
+	if (Input.GetButtonDown("Fire1") && remainingBullets > 0 && reloadBullet == 0) {
 		// make fire effect.
 		Instantiate(fireEffect, spawnPoint.position, spawnPoint.rotation);
 		
@@ -133,7 +141,17 @@ function Update () {
 		Instantiate(bulletObject, spawnPoint.position, spawnPoint.rotation);
 		
 		tankShot.Play();
+		
+		reloadBullet = 1;
+		remainingBullets--;
+		
+		StartCoroutine("ReloadBulletThread");
 	}
 	
+}
+
+function ReloadBulletThread() {
+	yield WaitForSeconds(3);
+	reloadBullet = 0;
 }
 
