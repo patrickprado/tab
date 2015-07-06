@@ -155,7 +155,7 @@ function OnTriggerEnter(hit: Collider) {
 
     numberOfShotsReceived += 1;
     if(numberOfShotsReceived == 2) {
-        Application.LoadLevel("End Game");
+        Application.LoadLevel("Lose Game");
     }
 }
 
