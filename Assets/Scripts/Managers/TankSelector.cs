@@ -5,8 +5,12 @@ using System.Collections;
 public class TankSelector : MonoBehaviour {
 
 	public GameObject currentTank;
+	public GameObject currentInfo;
+	public GameObject currentEspecs;
+
 	public Text currentTankName;
 	public Text currentTankDescription;
+	public Button nextButton;
 
 	public Text currentSpeed;
 	public Text currentAgility;
@@ -19,6 +23,10 @@ public class TankSelector : MonoBehaviour {
 		currentTank.SetActive (false);
 		currentTank = tank;
 		currentTank.SetActive (true);
+
+		currentInfo.SetActive (true);
+		currentEspecs.SetActive (true);
+		nextButton.interactable = true;
 
 		if (tank.name.Equals ("Cromwell")) {
 			currentTankName.text = "Cromwell Mk VIII (A27M)";

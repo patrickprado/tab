@@ -38,12 +38,12 @@ function Start() {
 
 function Update () {
 	
-	if (Input.GetKey (KeyCode.UpArrow)) {
+	if (Input.GetKey (KeyCode.W)) {
 		// plus speed
 		if (currentVelocity <= maxSpeed) 
 			currentVelocity += acceleration * Time.deltaTime;
 
-	} else if (Input.GetKey (KeyCode.DownArrow)) {
+	} else if (Input.GetKey (KeyCode.S)) {
 		// minus speed
 		if (currentVelocity >= -maxSpeed) 
 			currentVelocity -= acceleration * Time.deltaTime;
@@ -89,8 +89,8 @@ function Update () {
 
 
 	// Turn Tank
-	if (Input.GetKey (KeyCode.LeftArrow)) {
-		if (Input.GetKey(KeyCode.DownArrow)) {
+	if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey(KeyCode.S)) {
 			// Turn right
 			transform.Rotate(Vector3(0, rotationSpeed * Time.deltaTime, 0));
 			
@@ -111,8 +111,8 @@ function Update () {
 		}
 	}
 
-	if (Input.GetKey (KeyCode.RightArrow)) {
-		if (Input.GetKey(KeyCode.DownArrow)) {
+	if (Input.GetKey (KeyCode.D)) {
+		if (Input.GetKey(KeyCode.S)) {
 			// Turn left
 			transform.Rotate(Vector3(0, -rotationSpeed * Time.deltaTime, 0));
 			leftTrack.speed = rotationSpeed;
@@ -133,7 +133,7 @@ function Update () {
 	
 	
 	// Fire!
-	if (Input.GetButtonDown("Fire1") && remainingBullets > 0 && reloadBullet == 0) {
+	if (Input.GetKey (KeyCode.Space) && remainingBullets > 0 && reloadBullet == 0) {
 		// make fire effect.
 		Instantiate(fireEffect, spawnPoint.position, spawnPoint.rotation);
 		

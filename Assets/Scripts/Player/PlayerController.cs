@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour {
 	public int maxBullets;
 	public int remainingBullets;
 
+	public string tankIdentifier;
+
 	private bool isReload;
 
 	void Start () {
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour {
 		life = 100;
 		remainingBullets = maxBullets;
 		isReload = false;
+
+		this.gameObject.SetActive (tankIdentifier.Equals (TankSelector.currentTankSelected));
 	}
 	
 	// Update is called once per frame
@@ -34,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 			Time.timeScale = (isPaused ? 0 : 1);
 		}
 
-		if (Input.GetButtonDown ("Fire1") && !isReload) {
+		if (Input.GetKey (KeyCode.Space) && !isReload) {
 			if (remainingBullets > 0) {
 				fire();
 			}

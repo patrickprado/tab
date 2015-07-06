@@ -6,6 +6,8 @@ public class MapSelector : MonoBehaviour {
 
 	private Text currentSelected;
 
+	public Button nextButton;
+
 	public GameObject backgroundMap;
 
 	public static string mapSelectedName;
@@ -17,6 +19,8 @@ public class MapSelector : MonoBehaviour {
 
 		currentSelected = textSelected;
 		currentSelected.color = Color.red;
+
+		nextButton.interactable = true;
 	}
 
 	public void selectedMap(GameObject obj) {

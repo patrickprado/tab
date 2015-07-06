@@ -1,17 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/LoadOnClick.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/RotateTank.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Managers/MapSelector.cs" Line="1" Column="19" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="38" Column="3" />
-      <File FileName="Assets/Scripts/Player/CameraController.cs" Line="9" Column="1" />
-      <File FileName="Assets/Scripts/Managers/TankSelector.cs" Line="78" Column="33" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="37" Column="36" />
       <File FileName="Assets/Scripts/Player/MoveTurret.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/MoveTrack.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/MoveTank.js" Line="137" Column="12" />
-      <File FileName="Assets/Scripts/Player/EnemyShot.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/MoveGun.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/MoveTank.js" Line="136" Column="6" />
+      <File FileName="Assets/Scripts/Managers/GamePrefs.cs" Line="9" Column="3" />
+      <File FileName="Assets/Scripts/Managers/LoadOnClick.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

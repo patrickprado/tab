@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Managers\GamePrefs.cs" />
      <Compile Include="Assets\Scripts\Managers\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\Managers\MapSelector.cs" />
      <Compile Include="Assets\Scripts\Managers\RotateTank.cs" />
