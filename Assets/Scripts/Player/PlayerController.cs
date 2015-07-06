@@ -8,12 +8,10 @@ public class PlayerController : MonoBehaviour {
 	private bool isPaused;
 
 	public GameObject pausedScreen;
-	public Slider lifeBar;
 	public Text reloadBullet;
 	public Text tankBullets;
 	public Text tankName;
 
-	public static int life;
 	public int maxBullets;
 	public int remainingBullets;
 
@@ -23,7 +21,6 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		isPaused = false;
-		life = 100;
 		remainingBullets = maxBullets;
 		isReload = false;
 
@@ -44,7 +41,6 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 
-		lifeBar.value = life;
 		tankBullets.text = remainingBullets + "/" + maxBullets;
 		tankName.text = "Tanque: " + TankSelector.currentTankSelected;
 	}
@@ -55,7 +51,6 @@ public class PlayerController : MonoBehaviour {
 		reloadBullet.text = "RECARREGANDO...";
 
 		StartCoroutine (reloadArm());
-
 	}
 
 	IEnumerator reloadArm() {

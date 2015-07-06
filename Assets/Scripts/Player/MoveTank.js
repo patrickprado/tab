@@ -2,7 +2,8 @@
 
 
 import System.Threading;
- 
+import UnityEngine.UI;
+
 var leftTrack : MoveTrack;
 var rightTrack : MoveTrack;
 
@@ -20,6 +21,8 @@ var reloadBullet : int;
 var spawnPoint : Transform;
 var bulletObject : GameObject;
 var fireEffect : GameObject;
+var life : int;
+var lifeBar : Slider;
 
 private var tankRunning : AudioSource;
 private var tankShot : AudioSource;
@@ -34,6 +37,7 @@ function Start() {
      tankRunning = sounds[0];
     tankShot = sounds[1];
     reloadBullet = 0;
+    life = 100;
 }
 
 function Update () {
@@ -147,14 +151,17 @@ function Update () {
 		StartCoroutine("ReloadBulletThread");
 	}
 	
+	// Life	
+	lifeBar.value = life;
 }
 
 //Shot received
 function OnTriggerEnter(hit: Collider) {
-
     numberOfShotsReceived += 1;
-    if(numberOfShotsReceived == 2) {
-        Application.LoadLevel("End Game");
+    life -= 10;
+
+    if(lifeBar.value <= 0) {
+        Application.LoadLevel("Lose Game");
     }
 }
 

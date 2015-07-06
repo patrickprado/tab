@@ -2,10 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/MoveTank.js">
     <Files>
-      <File FileName="Assets/Scripts/Player/MoveTank.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/LoadOnClick.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/MoveTank.js" Line="161" Column="16" />
       <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Managers/TankSelector.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Managers/MapSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/EnemyShot.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/EnemyAI.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
