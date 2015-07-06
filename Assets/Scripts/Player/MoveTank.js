@@ -26,18 +26,17 @@ private var tankShot : AudioSource;
 
 
 function Start() {
-	// Get Track Controls
-	leftTrack = GameObject.Find(gameObject.name + "/Lefttrack").GetComponent(MoveTrack);
-	rightTrack = GameObject.Find(gameObject.name + "/Righttrack").GetComponent(MoveTrack);
-	
-	var sounds = gameObject.GetComponents(AudioSource);
- 	tankRunning = sounds[0];
-	tankShot = sounds[1];
-	reloadBullet = 0;
+    // Get Track Controls
+    leftTrack = GameObject.Find(gameObject.name + "/Lefttrack").GetComponent(MoveTrack);
+    rightTrack = GameObject.Find(gameObject.name + "/Righttrack").GetComponent(MoveTrack);
+    
+    var sounds = gameObject.GetComponents(AudioSource);
+     tankRunning = sounds[0];
+    tankShot = sounds[1];
+    reloadBullet = 0;
 }
 
 function Update () {
-	
 	if (Input.GetKey (KeyCode.W)) {
 		// plus speed
 		if (currentVelocity <= maxSpeed) 
@@ -150,8 +149,16 @@ function Update () {
 	
 }
 
-function ReloadBulletThread() {
-	yield WaitForSeconds(3);
-	reloadBullet = 0;
+//Shot received
+function OnTriggerEnter(hit: Collider) {
+
+    numberOfShotsReceived += 1;
+    if(numberOfShotsReceived == 2) {
+        Application.LoadLevel("End Game");
+    }
 }
 
+function ReloadBulletThread() {
+    yield WaitForSeconds(3);
+    reloadBullet = 0;
+}
