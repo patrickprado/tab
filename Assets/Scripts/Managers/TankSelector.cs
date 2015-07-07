@@ -86,4 +86,8 @@ public class TankSelector : MonoBehaviour {
 			currentTankSelected = "T34-85"; 
 		}
 	}
+
+	public void hideObject() {
+		currentTank.SetActive (false);
+	}
 }

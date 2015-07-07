@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Managers\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\Managers\MapSelector.cs" />
      <Compile Include="Assets\Scripts\Managers\RotateTank.cs" />
+     <Compile Include="Assets\Scripts\Managers\TankInitializer.cs" />
      <Compile Include="Assets\Scripts\Managers\TankSelector.cs" />
      <Compile Include="Assets\Scripts\Player\CameraController.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyAI.cs" />

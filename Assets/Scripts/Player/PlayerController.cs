@@ -23,8 +23,6 @@ public class PlayerController : MonoBehaviour {
 		isPaused = false;
 		remainingBullets = maxBullets;
 		isReload = false;
-
-		this.gameObject.SetActive (tankIdentifier.Equals (TankSelector.currentTankSelected));
 	}
 	
 	// Update is called once per frame
@@ -42,7 +40,6 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		tankBullets.text = remainingBullets + "/" + maxBullets;
-		tankName.text = "Tanque: " + TankSelector.currentTankSelected;
 	}
 
 	public void fire() {
